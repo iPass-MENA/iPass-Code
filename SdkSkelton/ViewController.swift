@@ -523,39 +523,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var dataDict: [[String: Any]] = []
     
 
-//    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.aXBhc3Ntb2Jpb3NAeW9wbWFpbC5jb21CaWtyYW0gc2luZ2ggICBjYjg5N2FlNC0wZDg2LTQzZmEtYmZhYy1hZjM0ZTFjOTFkMDM.C-BLHVUeW2nlFWgJGMCJV-w4PcSzq85r81X6bQuzE80"
-//    var emailStr = "ipassmobios@yopmail.com"
-//    var passwordStr  =  "Admin@123#"
+    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.bW9idGVzdDEyM0B5b3BtYWlsLmNvbXRlc3QgYXBpJ3MgICAzNDMzYWZlZC0zNWZkLTQ3MGMtOTNlYy1lYjBjN2I1Y2VlZjI.2XbfGso6YVZ5xhbM74Ye1NnOzPvKSCv20ceT9GzR3HQ"
+    var emailStr = "mobtest123@yopmail.com"
+    var passwordStr  =  "Admin@123#"
+   
     
-    
-// new  url cred
-    
-    
-//    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.dGVzdGNzQHlvcG1haWwuY29tVGVzdCBDcyAgIDgzN2I4OWRlLTU1ZGEtNGVjNy05NTBmLTE5NDQwY2RjZWYyZA.nV10BYNyMIu5u7kBwU3kMkr4wwi4JwHBeABU5sl_F4Y"
-    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.YW5tb2wtcmFuYUBjc2dyb3VwY2hkLmNvbUFubW9sIFJhbmEgICBiNmFjZGUxOC1iMzQzLTQzNDQtYTg0NC1kNWM0ZWFjYWQ4ZjA.mq9Kb4JTQtwBf91f7yOYV2KuhQ9BK0GvQezTSA4VvOU"
-    var emailStr = "anmol-rana@csgroupchd.com"
-    var passwordStr  =  "Anmol@1234#"
-    
-    
-    
-//    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.dGVzdGNzMUB5b3BtYWlsLmNvbXRlc3QgY3MxICAgOGRlN2NhMWMtZWE0Mi00ZjQ4LWE2NjQtMTk5OGZhZGFhMzIz.Tm8-vK25W6170v-qcYzQdeT5_XHmerqS_iZAapliknM"
-//    var emailStr = "testcs1@yopmail.com"
-//    var passwordStr  =  "Test@12345"
-    
-    
-  //
-    
-//    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.UHJlZXRpQGNzZ3JvdXBjaGQuY29tUHJlZXRpIFNoYXJtYSAgIGI5ODZiZmE4LWE4ZjEtNDAyMi05MDUzLTkzNjBkZGQ4MmUyYg.t3KVnxkbw0TCbUFCrFwsKc0mhlxRwNQ_VkD2h51henc"
-//    var emailStr = "Preeti@csgroupchd.com"
-//    var passwordStr  =  "Preeti@123#"
-
-    
-    
-//    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.dGVzdHdlYmhvb2tpcGFzc0B5b3BtYWlsLmNvbUFqYXkgS3VtYXIgICA1ZDBmMTQ5Yi1jM2ZlLTRlYTUtOGY2ZC1lZmU4NzM2MDg0OTE.Mgl6wdtfkMt3niHgbeRk7RYlB-QflCa69u8U3re1tDo"
-//    var emailStr = "testwebhookipass@yopmail.com"
-//    var passwordStr  =  "Admin@123#"
-    
-
     
     
     var nfcSession: NFCNDEFReaderSession?
@@ -585,7 +557,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         iPassSDKManger.delegate = self
        //http://192.168.11.27:4088/api/v1/ipass/create/authenticate/login
        // https://staging.ipass-mena.com/stagapi
-        DataBaseDownloading.initializeDynamicDb(serverUrl: "http://192.168.11.27:4088", completion:{progres, status, error in
+        DataBaseDownloading.initializeDynamicDb(serverUrl: "https://plusapi.ipass-mena.com", completion:{progres, status, error in
             print("progress-> " + progres, "status-> " + status, "Error-> " + error)
             DispatchQueue.main.async {
                 self.loadingView.updateProgress(progres)

@@ -60,8 +60,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/yazanalqasem/iPass2.0NativeiOS",
       "state" : {
-        "branch" : "update-10016Oct",
-        "revision" : "193918bb20c9d7fa0bdda39fe696dedabfd2848b"
+        "branch" : "update-10016Nov3",
+        "revision" : "ae23e25d63182b18bdb0340c7050325f1a8b12bf"
       }
     },
     {
