@@ -532,9 +532,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
 //    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.dGVzdGNzQHlvcG1haWwuY29tVGVzdCBDcyAgIDgzN2I4OWRlLTU1ZGEtNGVjNy05NTBmLTE5NDQwY2RjZWYyZA.nV10BYNyMIu5u7kBwU3kMkr4wwi4JwHBeABU5sl_F4Y"
-    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.dGVzdGNzQHlvcG1haWwuY29tVGVzdCBDcyAgIDgzN2I4OWRlLTU1ZGEtNGVjNy05NTBmLTE5NDQwY2RjZWYyZA.nV10BYNyMIu5u7kBwU3kMkr4wwi4JwHBeABU5sl_F4Y"
-    var emailStr = "testcs@yopmail.com"
-    var passwordStr  =  "Admin@12345#"
+    var appToken1 = "eyJhbGciOiJIUzI1NiJ9.YW5tb2wtcmFuYUBjc2dyb3VwY2hkLmNvbUFubW9sIFJhbmEgICBiNmFjZGUxOC1iMzQzLTQzNDQtYTg0NC1kNWM0ZWFjYWQ4ZjA.mq9Kb4JTQtwBf91f7yOYV2KuhQ9BK0GvQezTSA4VvOU"
+    var emailStr = "anmol-rana@csgroupchd.com"
+    var passwordStr  =  "Anmol@1234#"
     
     
     
@@ -583,9 +583,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.loadingView.updateProgress("")
         }
         iPassSDKManger.delegate = self
-       //
+       //http://192.168.11.27:4088/api/v1/ipass/create/authenticate/login
        // https://staging.ipass-mena.com/stagapi
-        DataBaseDownloading.initializeDynamicDb( serverUrl: " http://192.168.11.27:4088/api/v1/ipass", completion:{progres, status, error in
+        DataBaseDownloading.initializeDynamicDb(serverUrl: "http://192.168.11.27:4088", completion:{progres, status, error in
             print("progress-> " + progres, "status-> " + status, "Error-> " + error)
             DispatchQueue.main.async {
                 self.loadingView.updateProgress(progres)
@@ -733,11 +733,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let flow2: [String: String] = ["title": "IDV + Liveness + AML", "subtitle": "This flow includes Document Scanning, Document Authenticity, User Liveness, User Face Matching and AML check", "image": "flow2.png"]
         let flow3: [String: String] = ["title": "IDV + AML", "subtitle": "This flow includes Document Scanning, Document Authenticity and AML check", "image": "flow3.png"]
         let flow4: [String: String] = ["title": "IDV + Liveness ", "subtitle": "This flow includes Document Scanning, Document Authenticity, User Liveness and User Face Matching", "image": "flow4.png"]
+        let flow5: [String: String] = ["title": "IDV + Verification ", "subtitle": "This flow includes Document Scanning, Document Authenticity", "image": "flow4.png"]
        
         dataDict.append(flow1)
         dataDict.append(flow2)
         dataDict.append(flow3)
         dataDict.append(flow4)
+        dataDict.append(flow5)
         
     }
     
@@ -1256,7 +1258,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         else if(indexPath.row == 2) {
             DataManager.shared.selectedFlowCode = 10015
              startDocScanner(10015)
+        
         }
+        
+        else if(indexPath.row == 4) {
+            DataManager.shared.selectedFlowCode = 10016
+             startDocScanner(10016)
+        
+        }
+        
         else {
             DataManager.shared.selectedFlowCode = 10011
              startDocScanner(10011)

@@ -60,6 +60,9 @@ class ScannedDataViewController: UIViewController, UICollectionViewDelegate, UIC
         else if(DataManager.shared.selectedFlowCode == 10015) {
         dataDict = ["ID Doc Check", "AML Watchlist"]
         }
+        else if(DataManager.shared.selectedFlowCode == 10016) {
+        dataDict = ["ID Doc Check"]
+        }
         else {
         dataDict = ["ID Doc Check", "Liveness & Facing Similarity"]
         }
