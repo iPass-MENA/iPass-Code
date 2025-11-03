@@ -705,7 +705,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let flow2: [String: String] = ["title": "IDV + Liveness + AML", "subtitle": "This flow includes Document Scanning, Document Authenticity, User Liveness, User Face Matching and AML check", "image": "flow2.png"]
         let flow3: [String: String] = ["title": "IDV + AML", "subtitle": "This flow includes Document Scanning, Document Authenticity and AML check", "image": "flow3.png"]
         let flow4: [String: String] = ["title": "IDV + Liveness ", "subtitle": "This flow includes Document Scanning, Document Authenticity, User Liveness and User Face Matching", "image": "flow4.png"]
-        let flow5: [String: String] = ["title": "IDV + Verification ", "subtitle": "This flow includes Document Scanning, Document Authenticity", "image": "flow4.png"]
+        let flow5: [String: String] = ["title": "IDV", "subtitle": "This flow includes Document Scanning, Document Authenticity", "image": "flow4.png"]
        
         dataDict.append(flow1)
         dataDict.append(flow2)
